@@ -1,0 +1,24 @@
+#include <iostream>
+
+int main(){
+    int n1;
+    float n2;
+    char rd;
+    std::cout << "Specify wheather you are entering the radious or diameter(r/d):";
+    std::cin >> rd;
+    if ( rd == 'R' || rd == 'r'){
+        std::cout << "Enter the radious of the circle in meters:";
+        std::cin >> n1;
+        n2= 3.14*(n1*n1);
+        std::cout << "The area of the circle is:" << n2 << " meter square " << std::endl;
+        return 0;
+    }
+    else{
+        std::cout << "Enter the diameter of the circle:";
+        std::cin >> n1;
+        n1=n1/2;
+        n2= 3.14*(n1*n1);
+        std::cout << "The area of the circle is:" << n2 << " meter square " << std:: endl;
+        return 0;
+    }
+}
