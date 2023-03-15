@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+class area_of_circle
+{
+    private:
+        double radius;
+    public:
+        void calculating_area()
+        {
+            double r;
+            double area;
+            cout<< "Enter the radius of the circle: ";
+            cin >> r;
+            radius = r;
+            area=3.14*radius*radius;
+            cout << "The Radius of the circle: " << area << endl;
+        }
+};
+int main(){
+    area_of_circle obj;
+    obj.calculating_area();
+    return 0;
+}
