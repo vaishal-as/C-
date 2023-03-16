@@ -20,7 +20,7 @@ class vehicle{
         cout << "Want to apply break(y/n):";
         cin>> des;
         if ( des=='y' || des=='Y'){
-            cout << "The breakis being applied!!!" << endl;
+            cout << "The break is being applied!!!" << endl;
         }
         else if (des=='n' || des=='N'){
             cout << "The break is not applied" << endl;
