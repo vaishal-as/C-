@@ -1,0 +1,46 @@
+#include <iostream>
+using namespace std;
+class student{
+    public:
+    char name[100];
+    int roll_no;
+    int class_no;
+    int mm;
+    int pm;
+    int cm;
+    void gets(){
+        cout << "Enter the name of the student:";
+        cin >> name;
+        cout << "Enter the roll number of the student:";
+        cin >> roll_no;
+        cout << "Enter the class number(in numbers):";
+        cin >> class_no;
+        cout << "Enter Maths mark:";
+        cin >> mm;
+        cout << "Enter physics mark:";
+        cin >> pm;
+        cout << "Enter chemistry mark:";
+        cin >> cm;
+    }
+};
+class sports : public student{
+    public:
+    int sm;
+    void getsm(){
+        cout << "Enter the sports mark:";
+        cin >> sm;
+    }
+};
+class statment : public sports{
+    public:
+    void display(){
+        cout << "Total mark of " << name << " is:" << mm+pm+cm+sm << endl;
+        cout << "Average mark of the " << name << " is:" << (mm+pm+cm+sm)/4 << endl;
+    }
+};
+int main(){
+    statment obj;
+    obj.gets();
+    obj.getsm();
+    obj.display();
+}
