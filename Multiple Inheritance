@@ -1,0 +1,55 @@
+#include <iostream>
+using namespace std;
+class basic_info{
+    public:
+    char em;
+    char name[100];
+    char gender[10];
+    char place[100];
+    int id;
+    void basic(){
+        cout << "Enter the employee name:";
+        cin >> name;
+        cout << "Enter the employee id:";
+        cin >> id;
+        cout << "Enter the gender of the employee:";
+        cin >> gender;
+        cout << "Enter the place employee staying:";
+        cin >> place;
+    }
+
+};
+class more_info{
+    public:
+    char em;
+    char dept_name[100],work[50];
+    int year;
+    void more(){
+        cout << "Enter the departent name:";
+        cin >> dept_name;
+        cout << "Enter the year of joining:";
+        cin >> year;
+        cout << "Enter the current project name he/she are working in:";
+        cin >> work;
+    }
+};
+class display : public basic_info , public more_info{
+    public:
+    void display_details(){
+        cout << "***********************************************************************" << endl;
+        cout << "EMPLOYEE DETAILS" << endl;
+        cout << "The name of the employee is " << name << endl;
+        cout << "The id of the employee is " << id << endl;
+        cout << "The gender of the employee is " << gender << endl;
+        cout << "The place of the employee where he/she is staying is " << place << endl;
+        cout << "The year of joining of the employee is " << year << endl;
+        cout << "The Department of the employee is " << dept_name << endl;
+        cout << "The project he/she currently working is " << work << endl;
+    }
+};
+int main(){
+    display obj;
+    obj.basic();
+    obj.more();
+    obj.display_details();
+}
