@@ -1,0 +1,97 @@
+#include <iostream>
+using namespace std;
+class vehicle{
+    public:
+     int capacity(){
+        int cp;
+        cout << "Enter the fuel capacity of the vehicle:";
+        cin >> cp;
+        cout<< "The fuel capacity of your vehicle is:" << cp << endl;
+        return cp;
+     }
+     void fuel_amount(){
+        int fc,cost;
+        fc=capacity();
+        cost=95;
+        cout << "The total cost of the fuel is:" << fc*cost << endl;
+     }
+     void apply_break(){
+        char des;
+        cout << "Want to apply break(y/n):";
+        cin>> des;
+        if ( des=='y' || des=='Y'){
+            cout << "The breakis being applied!!!" << endl;
+        }
+        else if (des=='n' || des=='N'){
+            cout << "The break is not applied" << endl;
+        }
+     }  
+};
+class car : public vehicle{
+    public:
+    void selection(){
+    int a;
+    cout << "The vehicle you have selected is a car:" << endl << "Enter your choise:" << endl << "1)capacity" << endl << "2)fuel amount" << endl <<"3)apply break" << endl << "Your choise:";
+    cin >> a;
+    if (a==1){
+        capacity();
+    }
+    else if (a==2){
+        fuel_amount();
+    }
+    else if(a==3){
+        apply_break();
+    }
+    }
+};
+class bus : public vehicle{
+    public:
+    void select(){
+    int a;
+    cout << "The vehicle you have selected is a bus:" << endl << "Enter your choise:" << endl << "1)capacity" << endl << "2)fuel amount" << endl <<"3)apply break" << endl << "Your choise:";
+    cin >> a;
+    if (a==1){
+        capacity();
+    }
+    else if (a==2){
+        fuel_amount();
+    }
+    else if(a==3){
+        apply_break();
+    }
+    }
+};
+class Truck : public vehicle{
+    public:
+    void selected(){
+    int a;
+    cout << "The vehicle you have selected is a car:" << endl << "Enter your choise:" << endl << "1)capacity" << endl << "2)fuel amount" << endl <<"3)apply break" << endl << "Your choise:";
+    cin >> a;
+    if (a==1){
+        capacity();
+    }
+    else if (a==2){
+        fuel_amount();
+    }
+    else if(a==3){
+        apply_break();
+    }
+    }
+};
+int main(){
+    int ch;
+    cout << "Enter Your choise:" << endl << "1)car" << endl << "2)bus" << endl << "3)Truck" << endl << "Your choise:";
+    cin >> ch;
+    if (ch==1){
+        car obj;
+        obj.selection();
+    }
+    else if (ch==2){
+        bus obj1;
+        obj1.select();
+    }
+    else if(ch==3){
+        Truck obj2;
+        obj2.selected();
+    }
+}
